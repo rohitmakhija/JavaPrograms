@@ -31,6 +31,7 @@ public class LinkedList {
 		Node temp = new Node(data);
 		if(position == 0) {
 			temp.next = head;
+			head = temp;
 			listCount++;
 		}
 		else {
@@ -75,11 +76,12 @@ public class LinkedList {
 		Node current = head;
 		while(current != null) {
 			if(current.next == null) {
-				System.out.print(current.data+" ");
+				System.out.print(current.data+"");
 			}else {
-				System.out.print(current.data+" ->");
+				System.out.print(current.data+"->");
 			}
 			current = current.next;
 		}
+		System.out.println();
 	}
 }
